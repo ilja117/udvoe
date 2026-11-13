@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Поруч",
+    "slug": "poruch",
+    "scheme": "poruch",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A0908",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0908"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.poruch.mobile"
+    },
+    "android": {
+      "package": "app.poruch.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0908",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
