@@ -3,15 +3,15 @@ import { Section, i } from './types';
 
 export const sexology: Section = {
   id: 'sexology',
-  title: l('Сексологія', 'Сексология', 'Sex education'),
-  sub: l('Курс, міфи, розмови', 'Курс, мифы, разговоры', 'Course, myths, talks'),
-  intro: l('Знання, які знімають тривогу й додають упевненості.', 'Знания, которые снимают тревогу и добавляют уверенности.', 'Knowledge that eases anxiety and builds confidence.'),
+  title: l('Сексологія', 'Sex education'),
+  sub: l('Курс, міфи, розмови', 'Course, myths, talks'),
+  intro: l('Знання, які знімають тривогу й додають упевненості.', 'Knowledge that eases anxiety and builds confidence.'),
   ion: 'book-outline',
   cats: [
     {
       id: 'course',
-      title: l('Курс', 'Курс', 'Course'),
-      sub: l('основи крок за кроком', 'основы шаг за шагом', 'the basics, step by step'),
+      title: l('Курс', 'Course'),
+      sub: l('основи крок за кроком', 'the basics, step by step'),
       ion: 'school-outline',
       kind: 'list',
       items: [
@@ -29,8 +29,8 @@ export const sexology: Section = {
     },
     {
       id: 'myths',
-      title: l('Міфи', 'Мифы', 'Myths'),
-      sub: l('що з цього неправда', 'что из этого неправда', 'what is not true'),
+      title: l('Міфи', 'Myths'),
+      sub: l('що з цього неправда', 'what is not true'),
       ion: 'help-circle-outline',
       kind: 'list',
       items: [
@@ -48,8 +48,8 @@ export const sexology: Section = {
     },
     {
       id: 'talks',
-      title: l('Розмови', 'Разговоры', 'Talks'),
-      sub: l('як говорити про секс', 'как говорить о сексе', 'how to talk about sex'),
+      title: l('Розмови', 'Talks'),
+      sub: l('як говорити про секс', 'how to talk about sex'),
       ion: 'chatbubbles-outline',
       kind: 'list',
       items: [
@@ -67,10 +67,9 @@ export const sexology: Section = {
     },
     {
       id: 'desire',
-      title: l('Бажання', 'Желание', 'Desire'),
-      sub: l('різний темперамент у парі', 'разный темперамент в паре', 'mismatched libido'),
+      title: l('Бажання', 'Desire'),
+      sub: l('різний темперамент у парі', 'mismatched libido'),
       ion: 'flame-outline',
-      premium: true,
       kind: 'list',
       items: [
         i('Різне лібідо — це нормально', 'Майже в кожній парі хтось хоче частіше.',
@@ -85,10 +84,9 @@ export const sexology: Section = {
     },
     {
       id: 'body',
-      title: l('Тіло', 'Тело', 'Body'),
-      sub: l("здоров'я і комфорт", 'здоровье и комфорт', 'health and comfort'),
+      title: l('Тіло', 'Body'),
+      sub: l("здоров'я і комфорт", 'health and comfort'),
       ion: 'body-outline',
-      premium: true,
       kind: 'list',
       items: [
         i('Лубрикант — це нормально', 'Природного зволоження може бракувати — і це не показник бажання.',
@@ -103,8 +101,8 @@ export const sexology: Section = {
     },
     {
       id: 'consent',
-      title: l('Згода і межі', 'Согласие и границы', 'Consent & boundaries'),
-      sub: l('безпека для обох', 'безопасность для обоих', 'safety for both'),
+      title: l('Згода і межі', 'Consent & boundaries'),
+      sub: l('безпека для обох', 'safety for both'),
       ion: 'shield-checkmark-outline',
       kind: 'list',
       items: [

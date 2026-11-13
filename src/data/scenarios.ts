@@ -3,14 +3,14 @@ import { Section, i } from './types';
 
 export const scenarios: Section = {
   id: 'scenarios',
-  title: l('Сценарії', 'Сценарии', 'Scenarios'),
-  sub: l('Інтимні вечори — крок за кроком', 'Интимные вечера — шаг за шагом', 'Intimate evenings, step by step'),
+  title: l('Сценарії', 'Scenarios'),
+  sub: l('Інтимні вечори — крок за кроком', 'Intimate evenings, step by step'),
   ion: 'moon-outline',
   cats: [
     {
       id: 'her',
-      title: l('Для неї', 'Для неё', 'For her'),
-      sub: l('веде він', 'ведёт он', 'he leads'),
+      title: l('Для неї', 'For her'),
+      sub: l('веде він', 'he leads'),
       emoji: '🌸',
       kind: 'list',
       items: [
@@ -26,8 +26,8 @@ export const scenarios: Section = {
     },
     {
       id: 'him',
-      title: l('Для нього', 'Для него', 'For him'),
-      sub: l('веде вона', 'ведёт она', 'she leads'),
+      title: l('Для нього', 'For him'),
+      sub: l('веде вона', 'she leads'),
       emoji: '🌙',
       kind: 'list',
       items: [
@@ -43,8 +43,8 @@ export const scenarios: Section = {
     },
     {
       id: 'both',
-      title: l('Разом', 'Вместе', 'Together'),
-      sub: l('на рівних', 'на равных', 'as equals'),
+      title: l('Разом', 'Together'),
+      sub: l('на рівних', 'as equals'),
       emoji: '❤️',
       kind: 'list',
       items: [
@@ -60,8 +60,8 @@ export const scenarios: Section = {
     },
     {
       id: 'slow',
-      title: l('Повільно', 'Медленно', 'Slow'),
-      sub: l('без гонки', 'без гонки', 'no rush'),
+      title: l('Повільно', 'Slow'),
+      sub: l('без гонки', 'no rush'),
       emoji: '🕯️',
       kind: 'list',
       items: [
@@ -77,8 +77,8 @@ export const scenarios: Section = {
     },
     {
       id: 'quick',
-      title: l('Швидко', 'Быстро', 'Quick'),
-      sub: l('до години', 'до часа', 'under an hour'),
+      title: l('Швидко', 'Quick'),
+      sub: l('до години', 'under an hour'),
       emoji: '⚡',
       kind: 'list',
       items: [
@@ -94,8 +94,8 @@ export const scenarios: Section = {
     },
     {
       id: 'pause',
-      title: l('Після паузи', 'После паузы', 'After a break'),
-      sub: l('знову близько', 'снова близко', 'close again'),
+      title: l('Після паузи', 'After a break'),
+      sub: l('знову близько', 'close again'),
       emoji: '🤝',
       kind: 'list',
       items: [

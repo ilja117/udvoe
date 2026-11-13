@@ -67,17 +67,16 @@ export const MOODS = ['😊', '😍', '😌', '😴', '😔', '😤'];
 
 export const closeness: Section = {
   id: 'closeness',
-  title: l('Зближення', 'Сближение', 'Closeness'),
-  sub: l('Квести та щоденні практики для пари', 'Квесты и ежедневные практики для пары', 'Quests and daily practices for two'),
-  intro: l('Практики для пари — без тиску і оцінок', 'Практики для пары — без давления и оценок', 'Practices for two — no pressure, no judgement'),
+  title: l('Зближення', 'Closeness'),
+  sub: l('Квести та щоденні практики для пари', 'Quests and daily practices for two'),
+  intro: l('Практики для пари — без тиску і оцінок', 'Practices for two — no pressure, no judgement'),
   ion: 'heart-outline',
   cats: [
     {
       id: 'quest',
-      title: l('7-денний квест', '7-дневный квест', '7-day quest'),
-      sub: l('покроково · розмови і дотик', 'пошагово · разговоры и прикосновения', 'step by step · talks and touch'),
+      title: l('7-денний квест', '7-day quest'),
+      sub: l('покроково · розмови і дотик', 'step by step · talks and touch'),
       ion: 'flag-outline',
-      premium: true,
       kind: 'list',
       items: [
         i('День 1 · Увага', 'Сьогодні ви просто помічаєте одне одного.',
@@ -98,32 +97,30 @@ export const closeness: Section = {
     },
     {
       id: 'mini',
-      title: l('Міні-задачі', 'Мини-задачи', 'Mini tasks'),
-      sub: l('3 на день · прогрес і оцінка', '3 в день · прогресс и оценка', '3 a day · progress and rating'),
+      title: l('Міні-задачі', 'Mini tasks'),
+      sub: l('3 на день · прогрес і оцінка', '3 a day · progress and rating'),
       ion: 'checkbox-outline',
       kind: 'special',
     },
     {
       id: 'sentence',
-      title: l('Одне речення', 'Одно предложение', 'One sentence'),
-      sub: l(`${SENTENCES.length} речень · наступне через дві години`, `${SENTENCES.length} предложений · следующее через два часа`, `${SENTENCES.length} sentences · next one in two hours`),
+      title: l('Одне речення', 'One sentence'),
+      sub: l(`${SENTENCES.length} речень · наступне через дві години`, `${SENTENCES.length} sentences · next one in two hours`),
       ion: 'chatbubble-ellipses-outline',
       kind: 'special',
     },
     {
       id: 'calendar',
-      title: l('Календарі', 'Календари', 'Calendars'),
-      sub: l('настрій · цикл', 'настроение · цикл', 'mood · cycle'),
+      title: l('Календарі', 'Calendars'),
+      sub: l('настрій · цикл', 'mood · cycle'),
       ion: 'calendar-outline',
-      premium: true,
       kind: 'special',
     },
     {
       id: 'together',
-      title: l('Робимо разом', 'Делаем вместе', 'Do it together'),
-      sub: l('домашні ідеї', 'домашние идеи', 'ideas for home'),
+      title: l('Робимо разом', 'Do it together'),
+      sub: l('домашні ідеї', 'ideas for home'),
       ion: 'color-palette-outline',
-      premium: true,
       kind: 'list',
       items: [
         i('Малюємо одне одного', 'Не для галереї — для сміху.', 'Візьміть папір та олівці.', 'Десять хвилин на портрет партнера.', 'Повісьте результат на холодильник.'),
@@ -136,8 +133,8 @@ export const closeness: Section = {
     },
     {
       id: 'talks',
-      title: l('Розмови для пари', 'Разговоры для пары', 'Talks for two'),
-      sub: l('теми · детальний гайд', 'темы · подробный гайд', 'topics · detailed guide'),
+      title: l('Розмови для пари', 'Talks for two'),
+      sub: l('теми · детальний гайд', 'topics · detailed guide'),
       ion: 'chatbubbles-outline',
       kind: 'list',
       items: [

@@ -1,9 +1,7 @@
 import { router, useLocalSearchParams } from 'expo-router';
-import { Redirect } from '../../../../redirect';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { findCat } from '../../../../data';
-import { FREE_ITEMS } from '../../../../data/types';
 import { useT } from '../../../../i18n';
 import { useStore } from '../../../../store';
 import { C } from '../../../../theme';
@@ -17,9 +15,6 @@ export default function ItemScreen() {
   const { s, set } = useStore();
   const { t, tr } = useT();
   if (!cat || !it) return <Screen title="" back children={null} />;
-  // Deep links must not bypass the lock.
-  const locked = !s.premium && (!!cat.premium || (cat.kind === 'list' && n >= FREE_ITEMS));
-  if (locked) return <Redirect href="/profile" />;
   const key = `${sid}/${cid}/${n}`;
   const done = !!s.done[key];
   return (

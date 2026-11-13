@@ -168,16 +168,16 @@ export const GAMES: Record<string, Game> = {
 
 export const games: Section = {
   id: 'games',
-  title: l('Ігри', 'Игры', 'Games'),
-  sub: l('Настільні ігри 18+ для пари', 'Настольные игры 18+ для пары', 'Board games 18+ for two'),
-  intro: l('Віртуальні настільні ігри 18+ для пари.', 'Виртуальные настольные игры 18+ для пары.', 'Virtual board games 18+ for two.'),
+  title: l('Ігри', 'Games'),
+  sub: l('Настільні ігри 18+ для пари', 'Board games 18+ for two'),
+  intro: l('Віртуальні настільні ігри 18+ для пари.', 'Virtual board games 18+ for two.'),
   ion: 'game-controller-outline',
   cats: [
-    { id: 'tod', title: l('Правда або Дія', 'Правда или Действие', 'Truth or Dare'), emoji: '🃏', mins: '30–60', kind: 'game' },
-    { id: 'board', title: l('Доріжка бажань', 'Дорожка желаний', 'Path of wishes'), emoji: '🎲', mins: '30–60', kind: 'game' },
-    { id: 'questions', title: l('30 запитань', '30 вопросов', '30 questions'), emoji: '💬', mins: '60', kind: 'game', premium: true },
-    { id: 'prelude', title: l('Гра-прелюдія 18+', 'Игра-прелюдия 18+', 'Foreplay game 18+'), emoji: '🔥', mins: '40–70', kind: 'game', premium: true },
-    { id: 'dice', title: l('Кубики бажань', 'Кубики желаний', 'Wish dice'), emoji: '🎰', mins: '30–60', kind: 'game', premium: true },
-    { id: 'paths', title: l('Два шляхи', 'Два пути', 'Two paths'), emoji: '🌿', mins: '30–50', kind: 'game', premium: true },
+    { id: 'tod', title: l('Правда або Дія', 'Truth or Dare'), emoji: '🃏', mins: '30–60', kind: 'game' },
+    { id: 'board', title: l('Доріжка бажань', 'Path of wishes'), emoji: '🎲', mins: '30–60', kind: 'game' },
+    { id: 'questions', title: l('30 запитань', '30 questions'), emoji: '💬', mins: '60', kind: 'game' },
+    { id: 'prelude', title: l('Гра-прелюдія 18+', 'Foreplay game 18+'), emoji: '🔥', mins: '40–70', kind: 'game' },
+    { id: 'dice', title: l('Кубики бажань', 'Wish dice'), emoji: '🎰', mins: '30–60', kind: 'game' },
+    { id: 'paths', title: l('Два шляхи', 'Two paths'), emoji: '🌿', mins: '30–50', kind: 'game' },
   ],
 };

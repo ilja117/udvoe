@@ -1,12 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
-export type Lang = 'uk' | 'ru' | 'en';
+export type Lang = 'uk' | 'en';
 
 export type State = {
   lang: Lang | null;
   onboarded: boolean;
-  premium: boolean;
   role: 'main' | 'partner';
   pairCode: string;
   partnerCode: string | null;
@@ -22,7 +21,6 @@ export type State = {
 const initial: State = {
   lang: null,
   onboarded: false,
-  premium: false,
   role: 'main',
   pairCode: '',
   partnerCode: null,

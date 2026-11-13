@@ -6,14 +6,14 @@ const END = 'Завершення: накрий партнера пледом, �
 
 export const massage: Section = {
   id: 'massage',
-  title: l('Масаж', 'Массаж', 'Massage'),
-  sub: l('Повні ритуали крок за кроком', 'Полные ритуалы шаг за шагом', 'Full rituals, step by step'),
+  title: l('Масаж', 'Massage'),
+  sub: l('Повні ритуали крок за кроком', 'Full rituals, step by step'),
   ion: 'hand-left-outline',
   cats: [
     {
       id: 'head',
-      title: l('Масаж голови', 'Массаж головы', 'Head massage'),
-      sub: l('скальп, лоб, шия, плечі', 'скальп, лоб, шея, плечи', 'scalp, forehead, neck, shoulders'),
+      title: l('Масаж голови', 'Head massage'),
+      sub: l('скальп, лоб, шия, плечі', 'scalp, forehead, neck, shoulders'),
       ion: 'happy-outline',
       kind: 'guide',
       items: [
@@ -26,10 +26,9 @@ export const massage: Section = {
     },
     {
       id: 'back',
-      title: l('Масаж спини', 'Массаж спины', 'Back massage'),
-      sub: l('плечі, лопатки, поперек', 'плечи, лопатки, поясница', 'shoulders, shoulder blades, lower back'),
+      title: l('Масаж спини', 'Back massage'),
+      sub: l('плечі, лопатки, поперек', 'shoulders, shoulder blades, lower back'),
       ion: 'body-outline',
-      premium: true,
       kind: 'guide',
       items: [
         i('Масаж спини', 'Класика, яка працює завжди.', PREP,
@@ -42,10 +41,9 @@ export const massage: Section = {
     },
     {
       id: 'feet',
-      title: l('Масаж стоп', 'Массаж стоп', 'Foot massage'),
-      sub: l('підошви, пальці, розслаблення', 'подошвы, пальцы, расслабление', 'soles, toes, relaxation'),
+      title: l('Масаж стоп', 'Foot massage'),
+      sub: l('підошви, пальці, розслаблення', 'soles, toes, relaxation'),
       ion: 'footsteps-outline',
-      premium: true,
       kind: 'guide',
       items: [
         i('Масаж стоп', 'Найкращий подарунок після дня на ногах.', PREP,
@@ -57,10 +55,9 @@ export const massage: Section = {
     },
     {
       id: 'yoni',
-      title: l('Йоні масаж', 'Йони массаж', 'Yoni massage'),
-      sub: l('він масажує її · стегна, живіт', 'он массирует её · бёдра, живот', 'he massages her · thighs, belly'),
+      title: l('Йоні масаж', 'Yoni massage'),
+      sub: l('він масажує її · стегна, живіт', 'he massages her · thighs, belly'),
       ion: 'flower-outline',
-      premium: true,
       kind: 'guide',
       items: [
         i('Йоні масаж', 'Повільний ритуал довіри. Мета — розслаблення й контакт, а не результат.', PREP,
@@ -73,10 +70,9 @@ export const massage: Section = {
     },
     {
       id: 'full',
-      title: l('Загальний масаж', 'Общий массаж', 'Full-body massage'),
-      sub: l('спина, ноги, руки', 'спина, ноги, руки', 'back, legs, arms'),
+      title: l('Загальний масаж', 'Full-body massage'),
+      sub: l('спина, ноги, руки', 'back, legs, arms'),
       ion: 'hand-left-outline',
-      premium: true,
       kind: 'guide',
       items: [
         i('Загальний масаж', 'Сорок хвилин, після яких тіло ніби нове.', PREP,
@@ -89,10 +85,9 @@ export const massage: Section = {
     },
     {
       id: 'erotic',
-      title: l('Еротичний масаж', 'Эротический массаж', 'Erotic massage'),
-      sub: l('повільний дотик · зі згодою', 'медленное прикосновение · по согласию', 'slow touch · with consent'),
+      title: l('Еротичний масаж', 'Erotic massage'),
+      sub: l('повільний дотик · зі згодою', 'slow touch · with consent'),
       ion: 'heart-outline',
-      premium: true,
       kind: 'guide',
       items: [
         i('Еротичний масаж', 'Масаж, у якому головне — передчуття.', PREP,

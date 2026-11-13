@@ -11,7 +11,6 @@ import { Btn, IconCircle, IonName } from '../ui';
 type Step = 'lang' | 'age' | 'blocked' | 'rules' | 's1' | 's2' | 's3' | 'code';
 const LANGS: [Lang, string][] = [
   ['uk', 'Українська'],
-  ['ru', 'Русский'],
   ['en', 'English'],
 ];
 

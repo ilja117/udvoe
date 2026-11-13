@@ -3,14 +3,14 @@ import { Section, i } from './types';
 
 export const positions: Section = {
   id: 'positions',
-  title: l('Пози', 'Позы', 'Positions'),
-  sub: l('Для нього, для неї, для обох', 'Для него, для неё, для обоих', 'For him, for her, for both'),
+  title: l('Пози', 'Positions'),
+  sub: l('Для нього, для неї, для обох', 'For him, for her, for both'),
   ion: 'accessibility-outline',
   cats: [
     {
       id: 'her',
-      title: l('Для неї', 'Для неё', 'For her'),
-      sub: l('фокус на її задоволення', 'фокус на её удовольствии', 'focus on her pleasure'),
+      title: l('Для неї', 'For her'),
+      sub: l('фокус на її задоволення', 'focus on her pleasure'),
       ion: 'female-outline',
       kind: 'list',
       items: [
@@ -22,8 +22,8 @@ export const positions: Section = {
     },
     {
       id: 'him',
-      title: l('Для нього', 'Для него', 'For him'),
-      sub: l('фокус на його задоволення', 'фокус на его удовольствии', 'focus on his pleasure'),
+      title: l('Для нього', 'For him'),
+      sub: l('фокус на його задоволення', 'focus on his pleasure'),
       ion: 'male-outline',
       kind: 'list',
       items: [
@@ -35,8 +35,8 @@ export const positions: Section = {
     },
     {
       id: 'both',
-      title: l('Для обох', 'Для обоих', 'For both'),
-      sub: l('рівний контакт і ритм', 'равный контакт и ритм', 'equal contact and rhythm'),
+      title: l('Для обох', 'For both'),
+      sub: l('рівний контакт і ритм', 'equal contact and rhythm'),
       ion: 'heart-outline',
       kind: 'list',
       items: [
@@ -48,10 +48,9 @@ export const positions: Section = {
     },
     {
       id: 'oral-him',
-      title: l('Для мінету', 'Для минета', 'Oral for him'),
-      sub: l('зручність і кут', 'удобство и угол', 'comfort and angle'),
+      title: l('Для мінету', 'Oral for him'),
+      sub: l('зручність і кут', 'comfort and angle'),
       ion: 'accessibility-outline',
-      premium: true,
       kind: 'list',
       items: [
         i('Він лежить', 'Найрозслабленіший варіант для нього.', 'Він на спині, вона між його ніг або збоку.', 'Подушка під її лікті чи груди зменшує напругу в шиї.', 'Він не тисне на голову — темпом керує вона.'),
@@ -61,10 +60,9 @@ export const positions: Section = {
     },
     {
       id: 'oral-her',
-      title: l('Для кунілінгусу', 'Для куннилингуса', 'Oral for her'),
-      sub: l('доступ і комфорт', 'доступ и комфорт', 'access and comfort'),
+      title: l('Для кунілінгусу', 'Oral for her'),
+      sub: l('доступ і комфорт', 'access and comfort'),
       ion: 'flower-outline',
-      premium: true,
       kind: 'list',
       items: [
         i('Вона лежить на спині', 'Класика, у якій їй найлегше розслабитися.', 'Подушка під її тазом покращує доступ і розвантажує його шию.', 'Він лежить на животі між її ніг.', 'Питай, що приємніше: повільніше, м’якше, вище, нижче.'),
@@ -74,8 +72,8 @@ export const positions: Section = {
     },
     {
       id: 'soft',
-      title: l("М'який старт", 'Мягкий старт', 'Gentle start'),
-      sub: l('для початку або втоми', 'для начала или усталости', 'for beginnings or tired days'),
+      title: l("М'який старт", 'Gentle start'),
+      sub: l('для початку або втоми', 'for beginnings or tired days'),
       ion: 'leaf-outline',
       kind: 'list',
       items: [

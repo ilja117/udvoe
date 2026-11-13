@@ -27,7 +27,6 @@ export default function Home() {
         </View>
         <Text style={st.lvNext}>{lv.next ? `${t('toNext')} · ${lv.left} ✦` : t('maxLevel')}</Text>
       </Card>
-      {!s.premium && <Text style={st.note}>{t('freeNote')}</Text>}
       <Grid>
         {SECTIONS.map((sec) => (
           <Tile key={sec.id} title={tr(sec.title)} sub={tr(sec.sub)} ion={sec.ion} onPress={() => router.push(`/section/${sec.id}`)} />
@@ -45,5 +44,4 @@ const st = StyleSheet.create({
   track: { height: 8, borderRadius: 4, backgroundColor: C.cardHi, marginVertical: 12, overflow: 'hidden' },
   fill: { height: 8, borderRadius: 4, backgroundColor: C.accent },
   lvNext: { color: C.muted, fontSize: 15 },
-  note: { color: C.accent, opacity: 0.8, fontSize: 14.5, lineHeight: 20, textAlign: 'center', marginBottom: 18, paddingHorizontal: 20 },
 });

@@ -9,7 +9,6 @@ export type Cat = {
   sub?: L;
   ion?: IonName;
   emoji?: string;
-  premium?: boolean;
   /** list: items → detail; guide: single step-by-step ritual; game / special: custom screen */
   kind: 'list' | 'guide' | 'game' | 'special';
   items?: Item[];
@@ -26,6 +25,3 @@ export type Section = {
 };
 
 export const i = (t: string, d: string, ...steps: string[]): Item => ({ t, d, steps: steps.length ? steps : undefined });
-
-/** In free list categories the first FREE_ITEMS entries are open without Premium. */
-export const FREE_ITEMS = 2;

@@ -2,20 +2,17 @@ import { Ionicons } from '@expo/vector-icons';
 import { router, useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { useGuard } from '../../../access';
 import { findCat } from '../../../data';
-import { FREE_ITEMS } from '../../../data/types';
 import { useT } from '../../../i18n';
 import { useStore } from '../../../store';
 import { C, R } from '../../../theme';
-import { Btn, PremiumBadge, Screen, st as ui } from '../../../ui';
+import { Btn, Screen, st as ui } from '../../../ui';
 
 export default function CatScreen() {
   const { sid, cid } = useLocalSearchParams<{ sid: string; cid: string }>();
   const cat = findCat(sid, cid);
   const { s, set } = useStore();
   const { t, tr } = useT();
-  const guard = useGuard();
   if (!cat) return <Screen title="" back children={null} />;
 
   // The course asks once who is reading; the answer stays on this phone.
@@ -33,21 +30,20 @@ export default function CatScreen() {
   return (
     <Screen title={tr(cat.title)} back sub={tr(cat.sub)}>
       {(cat.items ?? []).map((it, idx) => {
-        const locked = !s.premium && idx >= FREE_ITEMS;
         const done = !!s.done[`${sid}/${cid}/${idx}`];
         return (
           <Pressable
             key={idx}
             style={({ pressed }) => [st.item, pressed && { opacity: 0.75 }]}
             accessibilityRole="button"
-            onPress={() => guard(locked, () => router.push(`/item/${sid}/${cid}/${idx}`))}>
+            onPress={() => router.push(`/item/${sid}/${cid}/${idx}`)}>
             <View style={{ flex: 1 }}>
-              <Text style={[st.t, locked && { color: C.muted }]}>{it.t}</Text>
-              <Text style={[st.d, locked && { color: C.dim }]} numberOfLines={2}>
+              <Text style={st.t}>{it.t}</Text>
+              <Text style={st.d} numberOfLines={2}>
                 {it.d}
               </Text>
             </View>
-            {locked ? <PremiumBadge /> : <Ionicons name={done ? 'checkmark-circle' : 'chevron-forward'} size={done ? 24 : 18} color={done ? C.gold : C.muted} />}
+            <Ionicons name={done ? 'checkmark-circle' : 'chevron-forward'} size={done ? 24 : 18} color={done ? C.gold : C.muted} />
           </Pressable>
         );
       })}

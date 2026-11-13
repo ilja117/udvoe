@@ -3,14 +3,14 @@ import { Section, i } from './types';
 
 export const plans: Section = {
   id: 'plans',
-  title: l('Плани', 'Планы', 'Plans'),
-  sub: l('Готові ідеї побачень для пари', 'Готовые идеи свиданий для пары', 'Ready-made date ideas for two'),
+  title: l('Плани', 'Plans'),
+  sub: l('Готові ідеї побачень для пари', 'Ready-made date ideas for two'),
   ion: 'calendar-outline',
   cats: [
     {
       id: 'her',
-      title: l('Для неї', 'Для неё', 'For her'),
-      sub: l('готує він', 'готовит он', 'he prepares'),
+      title: l('Для неї', 'For her'),
+      sub: l('готує він', 'he prepares'),
       emoji: '🌸',
       kind: 'list',
       items: [
@@ -28,8 +28,8 @@ export const plans: Section = {
     },
     {
       id: 'him',
-      title: l('Для нього', 'Для него', 'For him'),
-      sub: l('готує вона', 'готовит она', 'she prepares'),
+      title: l('Для нього', 'For him'),
+      sub: l('готує вона', 'she prepares'),
       emoji: '🌙',
       kind: 'list',
       items: [
@@ -47,8 +47,8 @@ export const plans: Section = {
     },
     {
       id: 'both',
-      title: l('Разом', 'Вместе', 'Together'),
-      sub: l('усе вдвох', 'всё вдвоём', 'all as a team'),
+      title: l('Разом', 'Together'),
+      sub: l('усе вдвох', 'all as a team'),
       emoji: '❤️',
       kind: 'list',
       items: [
@@ -66,8 +66,8 @@ export const plans: Section = {
     },
     {
       id: 'city',
-      title: l('Побачення в місті', 'Свидание в городе', 'City dates'),
-      sub: l('міські ідеї', 'городские идеи', 'ideas in town'),
+      title: l('Побачення в місті', 'City dates'),
+      sub: l('міські ідеї', 'ideas in town'),
       emoji: '🏙️',
       kind: 'list',
       items: [
@@ -85,8 +85,8 @@ export const plans: Section = {
     },
     {
       id: 'nature',
-      title: l('Побачення за містом', 'Свидание за городом', 'Out-of-town dates'),
-      sub: l('ідеї на природі', 'идеи на природе', 'ideas outdoors'),
+      title: l('Побачення за містом', 'Out-of-town dates'),
+      sub: l('ідеї на природі', 'ideas outdoors'),
       emoji: '🌲',
       kind: 'list',
       items: [
@@ -104,8 +104,8 @@ export const plans: Section = {
     },
     {
       id: 'online',
-      title: l('Онлайн', 'Онлайн', 'Online'),
-      sub: l('ідеї на відстані', 'идеи на расстоянии', 'long-distance ideas'),
+      title: l('Онлайн', 'Online'),
+      sub: l('ідеї на відстані', 'long-distance ideas'),
       emoji: '💬',
       kind: 'list',
       items: [

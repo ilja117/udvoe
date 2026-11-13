@@ -1,6 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams } from 'expo-router';
-import { Redirect } from '../../redirect';
 import React, { useEffect, useState } from 'react';
 import { Pressable, Share, StyleSheet, Text, View } from 'react-native';
 import { findCat } from '../../data';
@@ -107,7 +106,7 @@ function Calendar() {
   });
   const first = (new Date(ym.y, ym.m, 1).getDay() + 6) % 7; // Monday-first offset
   const days = new Date(ym.y, ym.m + 1, 0).getDate();
-  const title = new Date(ym.y, ym.m, 1).toLocaleDateString(lang === 'en' ? 'en-US' : lang === 'ru' ? 'ru-RU' : 'uk-UA', { month: 'long', year: 'numeric' });
+  const title = new Date(ym.y, ym.m, 1).toLocaleDateString(lang === 'en' ? 'en-US' : 'uk-UA', { month: 'long', year: 'numeric' });
   const shift = (d: number) => setYm(({ y, m }) => ({ y: m + d < 0 ? y - 1 : m + d > 11 ? y + 1 : y, m: (m + d + 12) % 12 }));
   const tap = (k: string) =>
     set((p) => {
@@ -187,11 +186,9 @@ function Calendar() {
 
 export default function SpecialScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { s } = useStore();
   const { tr } = useT();
   const cat = findCat('closeness', id);
   if (!cat) return <Screen title="" back children={null} />;
-  if (cat.premium && !s.premium) return <Redirect href="/profile" />;
   return (
     <Screen title={tr(cat.title)} back>
       {id === 'mini' && <Mini />}

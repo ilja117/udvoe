@@ -60,23 +60,14 @@ export function Screen({
   );
 }
 
-export function IconCircle({ ion, emoji, size = 48, dim }: { ion?: IonName; emoji?: string; size?: number; dim?: boolean }) {
+export function IconCircle({ ion, emoji, size = 48 }: { ion?: IonName; emoji?: string; size?: number }) {
   return (
-    <View style={[st.iconCircle, { width: size, height: size, borderRadius: size / 2, opacity: dim ? 0.45 : 1 }]}>
+    <View style={[st.iconCircle, { width: size, height: size, borderRadius: size / 2}]}>
       {emoji ? (
         <Text style={{ fontSize: size * 0.5 }}>{emoji}</Text>
       ) : (
         <Ionicons name={ion ?? 'ellipse-outline'} size={size * 0.54} color={C.gold} />
       )}
-    </View>
-  );
-}
-
-export function PremiumBadge() {
-  return (
-    <View style={st.badge}>
-      <Ionicons name="lock-closed" size={11} color={C.gold} />
-      <Text style={st.badgeText}>Premium</Text>
     </View>
   );
 }
@@ -87,7 +78,6 @@ export function Tile({
   tag,
   ion,
   emoji,
-  locked,
   onPress,
 }: {
   title: string;
@@ -95,20 +85,14 @@ export function Tile({
   tag?: string;
   ion?: IonName;
   emoji?: string;
-  locked?: boolean;
   onPress: () => void;
 }) {
   return (
     <Pressable style={({ pressed }) => [st.tile, pressed && st.pressed]} onPress={onPress} accessibilityRole="button">
-      {locked && (
-        <View style={st.badgePos}>
-          <PremiumBadge />
-        </View>
-      )}
-      <IconCircle ion={ion} emoji={emoji} dim={locked} />
-      <Text style={[st.tileTitle, locked && { color: C.muted }]}>{title}</Text>
+      <IconCircle ion={ion} emoji={emoji} />
+      <Text style={st.tileTitle}>{title}</Text>
       {sub ? (
-        <Text style={[st.tileSub, locked && { color: C.dim }]} numberOfLines={2}>
+        <Text style={st.tileSub} numberOfLines={2}>
           {sub}
         </Text>
       ) : null}
@@ -202,19 +186,6 @@ export const st = StyleSheet.create({
   tileTitle: { color: C.text, fontSize: 16.5, fontWeight: '700', marginTop: 12, textAlign: 'center' },
   tileSub: { color: C.muted, fontSize: 12.5, lineHeight: 17, marginTop: 6, textAlign: 'center' },
   tileTag: { color: C.accent, fontSize: 10.5, fontWeight: '700', letterSpacing: 1, marginTop: 8 },
-  badgePos: { position: 'absolute', top: 8, right: 8, zIndex: 2 },
-  badge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    borderWidth: 1,
-    borderColor: C.border,
-    backgroundColor: C.card,
-    borderRadius: 12,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-  },
-  badgeText: { color: C.gold, fontSize: 11, fontWeight: '600' },
   iconCircle: { backgroundColor: C.iconBg, borderWidth: 1, borderColor: C.border, alignItems: 'center', justifyContent: 'center' },
   card: { backgroundColor: C.card, borderRadius: R.card, borderWidth: 1, borderColor: C.border, padding: 18, marginBottom: 16 },
   btn: { minHeight: 54, borderRadius: R.btn, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 18, borderWidth: 1 },

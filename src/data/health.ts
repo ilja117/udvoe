@@ -3,14 +3,14 @@ import { Section, i } from './types';
 
 export const health: Section = {
   id: 'health',
-  title: l("Здоров'я", 'Здоровье', 'Health'),
-  sub: l('Вправи, відновлення, харчування, звички', 'Упражнения, восстановление, питание, привычки', 'Exercise, recovery, nutrition, habits'),
-  intro: l('Вправи, відновлення, харчування, звички.', 'Упражнения, восстановление, питание, привычки.', 'Exercise, recovery, nutrition, habits.'),
+  title: l("Здоров'я", 'Health'),
+  sub: l('Вправи, відновлення, харчування, звички', 'Exercise, recovery, nutrition, habits'),
+  intro: l('Вправи, відновлення, харчування, звички.', 'Exercise, recovery, nutrition, habits.'),
   ion: 'fitness-outline',
   cats: [
     {
       id: 'ex-m',
-      title: l('Вправи для чоловіка', 'Упражнения для мужчины', 'Exercises for him'),
+      title: l('Вправи для чоловіка', 'Exercises for him'),
       ion: 'barbell-outline',
       kind: 'list',
       items: [
@@ -28,7 +28,7 @@ export const health: Section = {
     },
     {
       id: 'ex-f',
-      title: l('Вправи для жінки', 'Упражнения для женщины', 'Exercises for her'),
+      title: l('Вправи для жінки', 'Exercises for her'),
       ion: 'barbell-outline',
       kind: 'list',
       items: [
@@ -46,7 +46,7 @@ export const health: Section = {
     },
     {
       id: 'rec-m',
-      title: l('Відновлення для чоловіка', 'Восстановление для мужчины', 'Recovery for him'),
+      title: l('Відновлення для чоловіка', 'Recovery for him'),
       ion: 'walk-outline',
       kind: 'list',
       items: [
@@ -64,7 +64,7 @@ export const health: Section = {
     },
     {
       id: 'rec-f',
-      title: l('Відновлення для жінки', 'Восстановление для женщины', 'Recovery for her'),
+      title: l('Відновлення для жінки', 'Recovery for her'),
       ion: 'walk-outline',
       kind: 'list',
       items: [
@@ -82,7 +82,7 @@ export const health: Section = {
     },
     {
       id: 'food',
-      title: l('Харчування', 'Питание', 'Nutrition'),
+      title: l('Харчування', 'Nutrition'),
       ion: 'nutrition-outline',
       kind: 'list',
       items: [
@@ -100,7 +100,7 @@ export const health: Section = {
     },
     {
       id: 'habits',
-      title: l('Звички', 'Привычки', 'Habits'),
+      title: l('Звички', 'Habits'),
       ion: 'repeat-outline',
       kind: 'list',
       items: [

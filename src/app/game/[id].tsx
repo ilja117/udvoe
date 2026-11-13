@@ -1,11 +1,9 @@
 import { useLocalSearchParams } from 'expo-router';
-import { Redirect } from '../../redirect';
 import React, { useMemo, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { findCat } from '../../data';
 import { GAMES, Game } from '../../data/games';
 import { useT } from '../../i18n';
-import { useStore } from '../../store';
 import { C, R } from '../../theme';
 import { Btn, Card, Screen } from '../../ui';
 
@@ -194,12 +192,10 @@ function Board({ g }: { g: Extract<Game, { engine: 'board' }> }) {
 
 export default function GameScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { s } = useStore();
   const { t, tr } = useT();
   const cat = findCat('games', id);
   const g = GAMES[id ?? ''];
   if (!cat || !g) return <Screen title="" back children={null} />;
-  if (cat.premium && !s.premium) return <Redirect href="/profile" />;
   return (
     <Screen title={tr(cat.title)} back>
       {g.engine === 'tod' && <Tod g={g} />}
