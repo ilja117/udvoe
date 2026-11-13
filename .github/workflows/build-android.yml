@@ -1,0 +1,57 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ccr-2ed4e5c6-kfjptn]
+    paths-ignore: ['**.md']
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - run: npm ci
+
+      - run: npx tsc --noEmit
+
+      - name: Generate native Android project
+        run: npx expo prebuild -p android --no-install
+        env:
+          CI: '1'
+
+      - name: Build release APK
+        working-directory: android
+        run: ./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a --no-daemon
+
+      - name: Name the APK
+        run: cp android/app/build/outputs/apk/release/app-release.apk poruch.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: poruch-apk
+          path: poruch.apk
+
+      - name: Publish as a GitHub release (direct download link)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="apk-${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" poruch.apk --prerelease --target "$GITHUB_SHA" \
+            --title "Android APK #${GITHUB_RUN_NUMBER}" \
+            --notes "Debug-signed APK for direct install. Open on an Android phone, download, install."
